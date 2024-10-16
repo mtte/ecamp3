@@ -62,6 +62,11 @@ api:
       clientId: 'WrKABq7GwmC6h1F0W73OGX_fOTHWWXnKXfrPMHOdQWY'
       clientSecret: 'oQ164RDMIAocL6PhmCoeT1Ymcg-7WcOJZdxCnIph5gM'
       baseUrl: 'https://jubla.puzzle.ch'
+    # TODO mtte: Add OAuth credentials
+    jemkdb:
+      clientId: ''
+      clientSecret: ''
+      baseUrl: 'https://jemk.puzzle.ch'
   resources:
     requests:
       cpu: 10m

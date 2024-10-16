@@ -141,6 +141,23 @@ spec:
                   name: {{ include "api.name" . }}
                   key: oauth-jubladb-base-url
             {{- end }}
+            {{- if .Values.api.oauth.jemkdb.clientId }}
+            - name: OAUTH_JEMKDB_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "api.name" . }}
+                  key: oauth-jemkdb-client-id
+            - name: OAUTH_JEMKDB_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "api.name" . }}
+                  key: oauth-jemkdb-client-secret
+            - name: OAUTH_JEMKDB_BASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "api.name" . }}
+                  key: oauth-jemkdb-base-url
+            {{- end }}
           volumeMounts:
             - mountPath: /app/config/jwt/public.pem
               name: jwt-keypair

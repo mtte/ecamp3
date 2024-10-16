@@ -87,6 +87,9 @@ jobs:
             --set api.oauth.jubladb.clientId='${{ secrets.OAUTH_JUBLADB_CLIENT_ID }}' \
             --set api.oauth.jubladb.clientSecret='${{ secrets.OAUTH_JUBLADB_CLIENT_SECRET }}' \
             --set api.oauth.jubladb.baseUrl='${{ secrets.OAUTH_JUBLADB_BASE_URL }}' \
+            --set api.oauth.jemkdb.clientId='${{ secrets.OAUTH_JEMKDB_CLIENT_ID }}' \
+            --set api.oauth.jemkdb.clientSecret='${{ secrets.OAUTH_JEMKDB_CLIENT_SECRET }}' \
+            --set api.oauth.jemkdb.baseUrl='${{ secrets.OAUTH_JEMKDB_BASE_URL }}' \
             --set frontend.sentryDsn='${{ secrets.FRONTEND_SENTRY_DSN }}' \
             --set print.sentryDsn='${{ secrets.PRINT_SENTRY_DSN }}' \
             --set print.ingress.readTimeoutSeconds='${{ vars.PRINT_INGRESS_READ_TIMEOUT_SECONDS }}' \
