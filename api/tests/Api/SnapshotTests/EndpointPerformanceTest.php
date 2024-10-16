@@ -228,6 +228,7 @@ class EndpointPerformanceTest extends ECampApiTestCase {
                 '/auth/pbsmidata' => false,
                 '/auth/cevidb' => false,
                 '/auth/jubladb' => false,
+                '/auth/jemkdb' => false,
                 '/auth/reset_password' => false,
                 '/auth/resend_activation' => false,
                 '/invitations' => false,

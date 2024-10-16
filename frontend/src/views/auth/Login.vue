@@ -147,6 +147,18 @@
       </v-btn>
       <v-btn
         dark
+        color="blue"
+        :x-large="$vuetify.breakpoint.smAndUp"
+        text
+        @click="loginJemkDB"
+      >
+        <v-icon size="32">$vuetify.icons.jemk</v-icon>
+        <span class="text--secondary body-2 font-weight-medium">{{
+          $tc('views.auth.login.provider.jemkdb')
+        }}</span>
+      </v-btn>
+      <v-btn
+        dark
         color="blue-grey lighten-3"
         :x-large="$vuetify.breakpoint.smAndUp"
         text
@@ -267,6 +279,9 @@ export default {
     },
     async loginJublaDB() {
       await this.$auth.loginJublaDB()
+    },
+    async loginJemkDB() {
+      await this.$auth.loginJemkDB()
     },
   },
 }

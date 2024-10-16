@@ -323,6 +323,31 @@ describe('authentication logic', () => {
     })
   })
 
+  describe('loginJemkDB()', () => {
+    const { location } = window
+    beforeEach(() => {
+      delete window.location
+      window.location = {
+        origin: 'http://localhost',
+        href: 'http://localhost/login',
+      }
+      store.replaceState(createState())
+    })
+    afterEach(() => {
+      window.location = location
+    })
+
+    it('forwards to jemkdb authentication endpoint', async () => {
+      // when
+      await auth.loginJemkDB()
+
+      // then
+      expect(window.location.href).toBe(
+        '/auth/jemkdb?callback=http%3A%2F%2Flocalhost%2FloginCallback'
+      )
+    })
+  })
+
   describe('logout()', () => {
     it('resolves to false if the user successfully logs out', async () => {
       // given
@@ -365,6 +390,10 @@ function createState(authState = {}) {
         },
         oauthJubladb: {
           href: '/auth/jubladb{?callback}',
+          templated: true,
+        },
+        oauthJemkdb: {
+          href: '/auth/jemkdb{?callback}',
           templated: true,
         },
         _meta: {

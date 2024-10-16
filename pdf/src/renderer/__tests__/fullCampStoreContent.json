@@ -120,6 +120,10 @@
       "href": "/api/auth/jubladb{?callback}",
       "templated": true
     },
+    "oauthJemkdb": {
+      "href": "/api/auth/jemkdb{?callback}",
+      "templated": true
+    },
     "resetPassword": {
       "href": "/api/auth/reset_password{/id}",
       "templated": true

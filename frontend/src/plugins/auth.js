@@ -139,6 +139,10 @@ async function loginJublaDB() {
   return redirectToOAuthLogin('oauthJubladb')
 }
 
+async function loginJemkDB() {
+  return redirectToOAuthLogin('oauthJemkdb')
+}
+
 export async function logout() {
   Cookies.remove(headerAndPayloadCookieName())
   store.commit('logout')
@@ -166,6 +170,7 @@ export const auth = {
   loginPbsMiData,
   loginCeviDB,
   loginJublaDB,
+  loginJemkDB,
   logout,
   loadUser,
   resetPasswordRequest,

@@ -127,6 +127,14 @@ class Profile extends BaseEntity {
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     public ?string $jubladbId = null;
 
+    /**
+     * JemkDB id of the user.
+     */
+    // TODO mtte: verify that our emails from hitobito are verified/trusted
+    #[ApiProperty(readable: false, writable: false)]
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    public ?string $jemkdbId = null;
+
     // ========================= end trusted Oauth provider ids =========================
 
     /**

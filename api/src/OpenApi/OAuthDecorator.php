@@ -111,6 +111,30 @@ final class OAuthDecorator implements OpenApiFactoryInterface {
         );
         $openApi->getPaths()->addPath('/auth/jubladb', $pathItemJubladb);
 
+        $pathItemJemkdb = new Model\PathItem(
+            ref: 'JemkDB OAuth',
+            get: new Model\Operation(
+                operationId: 'oauthJemkdbRedirect',
+                tags: ['OAuth'],
+                parameters: [
+                    new Model\Parameter(
+                        name: 'callback',
+                        in: 'path',
+                        schema: [
+                            'type' => 'string',
+                        ]
+                    ),
+                ],
+                responses: [
+                    '302' => [
+                        'description' => 'Redirect to the JemkDB OAuth authorization endpoint',
+                    ],
+                ],
+                summary: 'Log in using JemkDB Oauth.',
+            ),
+        );
+        $openApi->getPaths()->addPath('/auth/jemkdb', $pathItemJemkdb);
+
         return $openApi;
     }
 }

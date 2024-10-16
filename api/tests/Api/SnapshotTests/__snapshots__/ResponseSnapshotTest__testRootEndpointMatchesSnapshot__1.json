@@ -87,6 +87,10 @@
             "href": "\/auth\/google{?callback}",
             "templated": true
         },
+        "oauthJemkdb": {
+            "href": "\/auth\/jemkdb{?callback}",
+            "templated": true
+        },
         "oauthJubladb": {
             "href": "\/auth\/jubladb{?callback}",
             "templated": true

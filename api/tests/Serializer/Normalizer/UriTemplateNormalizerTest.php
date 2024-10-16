@@ -46,6 +46,9 @@ class UriTemplateNormalizerTest extends TestCase {
                 case 'connect_jubladb_start':
                     return '/auth/jubladb';
 
+                case 'connect_jemkdb_start':
+                    return '/auth/jemkdb';
+
                 case '_api_/auth/resend_activation{._format}_post':
                     return '/auth/resend_activation';
 
@@ -82,6 +85,10 @@ class UriTemplateNormalizerTest extends TestCase {
             ],
             'oauthJubladb' => [
                 'href' => '/auth/jubladb{?callback}',
+                'templated' => true,
+            ],
+            'oauthJemkdb' => [
+                'href' => '/auth/jemkdb{?callback}',
                 'templated' => true,
             ],
             'resendActivation' => [

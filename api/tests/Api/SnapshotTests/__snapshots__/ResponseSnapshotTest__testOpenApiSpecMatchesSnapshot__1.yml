@@ -23538,6 +23538,29 @@ paths:
       tags:
         - OAuth
     ref: 'Google OAuth'
+  /auth/jemkdb:
+    get:
+      operationId: oauthJemkdbRedirect
+      parameters:
+        -
+          allowEmptyValue: false
+          allowReserved: false
+          deprecated: false
+          description: ''
+          explode: false
+          in: path
+          name: callback
+          required: false
+          schema:
+            type: string
+          style: simple
+      responses:
+        302:
+          description: 'Redirect to the JemkDB OAuth authorization endpoint'
+      summary: 'Log in using JemkDB Oauth.'
+      tags:
+        - OAuth
+    ref: 'JemkDB OAuth'
   /auth/jubladb:
     get:
       operationId: oauthJubladbRedirect
